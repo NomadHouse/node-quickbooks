@@ -2308,6 +2308,8 @@ module.request = function(context, verb, options, entity, callback) {
 
   // Always request InvoiceLink when doing something with an Invoice.
   if (url.indexOf("invoice") !== -1) {
+      console.log("MARINA", typeof url)
+      console.log("MARINA2", url)
     url = replace("?query=", "?include=invoiceLink&query=")
   }
 
